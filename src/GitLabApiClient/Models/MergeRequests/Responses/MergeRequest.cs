@@ -24,6 +24,9 @@ namespace GitLabApiClient.Models.MergeRequests.Responses
         [JsonProperty("assignee")]
         public Assignee Assignee { get; set; }
 
+        [JsonProperty("assignees")]
+        public List<Assignee> Assignees { get; } = new List<Assignee>();
+
         [JsonProperty("description")]
         public string Description { get; set; }
 
@@ -92,5 +95,12 @@ namespace GitLabApiClient.Models.MergeRequests.Responses
 
         [JsonProperty("merged_by")]
         public Assignee MergedBy { get; set; }
+
+        [JsonProperty("merged_at")]
+        public DateTime MergedAt { get; set; }
+
+        [JsonProperty("changes_count")]
+        public int ChangesCount { get; set; }
+
     }
 }
